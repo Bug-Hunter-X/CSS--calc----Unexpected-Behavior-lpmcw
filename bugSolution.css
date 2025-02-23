@@ -1,0 +1,16 @@
+/* bugSolution.css */
+#parent {
+  width: 500px; /* Explicit width for the parent */
+}
+
+#child {
+  width: calc(50% - 10px);
+}
+
+/* Avoid overly complex nested calc() like this: */
+/* width: calc(calc(50% - 10px) + 20px); */
+/* Instead, break it down for better readability and error avoidance: */
+#anotherChild {
+  width: calc(50% - 10px);
+  margin-left: 20px;
+}
